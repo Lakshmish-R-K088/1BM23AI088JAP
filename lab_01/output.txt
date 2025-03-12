@@ -1,0 +1,24 @@
+Welcome to the gym
+Enter number of members:
+1
+Enter your name
+pavan
+Enter your age:
+20
+Enter your membership Status:
+true
+Enter your membership duration:
+10
+Name: pavan
+Age: 20
+Status: true
+Gym fee is 10000.0 for 10 months
+
+b w b w b w b w 
+w b w b w b w b 
+b w b w b w b w 
+w b w b w b w b 
+b w b w b w b w 
+w b w b w b w b 
+b w b w b w b w 
+w b w b w b w b 
