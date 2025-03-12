@@ -1,0 +1,5 @@
+Name: john snow
+Age: 20
+Status: Active
+Duration: 12
+Fee : 60000.0
