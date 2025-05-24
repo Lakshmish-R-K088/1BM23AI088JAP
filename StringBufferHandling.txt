@@ -1,0 +1,6 @@
+Capacity of StringBuffer object sb1: 16
+Capacity of StringBuffer object sb2: 21
+Enter a string: MalayalaM
+Reversed string in uppercase: MALAYALAM
+Enter a string to append:  Horror
+String after appending: MalayalaM Horror

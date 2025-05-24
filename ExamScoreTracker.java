@@ -1,45 +1,33 @@
 import java.util.Scanner;
 
-class ExamScoreTracker {
-    int marks;
-    String Name;
-
-    ExamScoreTracker(int M, String N) {
-        this.marks = M;
-        this.Name = N;
-    }
-
+public class ExamScoreTracker {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        final int n = 5;
-        ExamScoreTracker obj[] = new ExamScoreTracker[n];
+        final int NUM_STUDENTS = 5;
+        int[] examScores = new int[NUM_STUDENTS];
 
-        for (int i = 0; i < n; i++) {
-            System.out.println("Enter Name of student " + (i + 1) + ":");
-            String name = scan.nextLine();
-
-            System.out.println("Enter Marks of student " + (i + 1) + ":");
-            int marks = scan.nextInt();
-
-            scan.nextLine();
-
-            obj[i] = new ExamScoreTracker(marks, name);
-            System.out.println(obj[i].Name + " has scored a total of: " + obj[i].marks);
+        // Input exam scores for each student
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter exam scores for each student:");
+        for (int i = 0; i < NUM_STUDENTS; i++) {
+            System.out.print("Enter score for student " + (i + 1) + ": ");
+            examScores[i] = scanner.nextInt();
         }
 
-        ExamScoreTracker m = obj[0];
+        // Calculate sum of scores and highest score
         int sum = 0;
-
-        for (int j = 0; j < n; j++) {
-            if (obj[j].marks > m.marks) {
-                m = obj[j];
+        int highestScore = examScores[0];
+        for (int score : examScores) {
+            sum += score;
+            if (score > highestScore) {
+                highestScore = score;
             }
-            sum += obj[j].marks;
         }
 
-        System.out.println("The student with the highest marks is " + m.Name + " with " + m.marks + " marks.");
-        System.out.println("The total sum of marks for all students is: " + sum);
+        // Display statistics
+        System.out.println("\nExam score statistics:");
+        System.out.println("Sum of all scores: " + sum);
+        System.out.println("Highest score attained: " + highestScore);
 
-        scan.close();
+        scanner.close(); // Close the scanner to prevent resource leaks
     }
 }
